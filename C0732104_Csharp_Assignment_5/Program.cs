@@ -13,38 +13,36 @@ namespace C0732104_Csharp_Assignment_5
         public static void Main()
         {
 
-            Program2 orange = new Program2();
-            Console.WriteLine(orange.Gematria("universe"));
-            Console.ReadLine();
+         Program2 orange = new Program2();
+         Console.WriteLine(orange.Gematria("universe"));
+         Console.ReadLine();
         }
 
 
         public int Gematria(string word)
         {
 
-            int GematriaValue = 0;
-
-            for (int i = 0; i < word.Length; i++)
+         int GematriaValue = 0;
+         for (int i = 0; i < word.Length; i++)
 
 
             {
                 GematriaValue += LetterValue(word[i].ToString());
             }
-            return GematriaValue;
+         return GematriaValue;
         }
 
         public int LetterValue(string letter)
 
         {
 
-            int x = 0;
-            while (Letters[x] != letter)
+         int x = 0;
+         while (Letters[x] != letter)
             {
-
-                if (Letters[x++] == letter)
-                    return x;
+             if (Letters[x++] == letter)
+                    return -1;
             }
-        return -1;
+        return x + 1;
        }
    }
 }
