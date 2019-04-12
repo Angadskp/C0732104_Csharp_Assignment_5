@@ -17,15 +17,34 @@ namespace C0732104_Csharp_Assignment_5
             Console.WriteLine(orange.Gematria("universe"));
             Console.ReadLine();
         }
+
+
         public int Gematria(string word)
         {
+
             int GematriaValue = 0;
+
             for (int i = 0; i < word.Length; i++)
+
+
             {
                 GematriaValue += LetterValue(word[i].ToString());
             }
-
             return GematriaValue;
         }
-    }
+
+        public int LetterValue(string letter)
+
+        {
+
+            int x = 0;
+            while (Letters[x] != letter)
+            {
+
+                if (Letters[x++] == letter)
+                    return x;
+            }
+        return -1;
+       }
+   }
 }
